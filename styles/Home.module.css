@@ -1,0 +1,43 @@
+.titre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 90vw;
+    height: 300px;
+    font-size: 6.4vw;
+    text-transform: uppercase;
+}
+
+.name {
+    color: #ffffff;
+}
+
+.profession {
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1.5px #f18c52;
+}
+
+@media only screen and (min-width: 768px) {
+    .titre {
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .titre {
+        font-size: 4.8vw;
+    }
+}
+
+@media only screen and (min-width: 1921px) {
+    .titre {
+        font-size: 5rem;
+    }
+}

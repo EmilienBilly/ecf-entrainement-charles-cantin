@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap");
+
+html,
+body {
+    background: #1a1a1a;
+    padding: 0;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 2rem;
+    height: 4px;
+    margin: 7px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 3rem;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.nav-link:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px #f18c52;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.nav-link:hover:after {
+    transform: scaleX(1);
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        padding: 0;
+        left: 0;
+        opacity: 0;
+        top: 5.5rem;
+        flex-direction: column;
+        min-width: 100vw;
+        text-align: center;
+        justify-content: center;
+        transition: 0.3s;
+        background-color: rgba(26, 26, 26, 0.98);
+        z-index: 3;
+    }
+
+    .navbar.active {
+        background-color: rgba(26, 26, 26, 0.98);
+    }
+
+    .social-media-icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        padding-right: 10px;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .nav-link {
+        font-size: 1.7rem;
+        color: #ffffff;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+    }
+}
