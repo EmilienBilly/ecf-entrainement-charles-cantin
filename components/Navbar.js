@@ -2,8 +2,12 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div>
-                <a>FACEBOOK</a>
-                <a>INSTAGRAM</a>
+                <a>
+                    <img src="/facebook-icon.svg" className="social-media-icon" alt="" />
+                </a>
+                <a>
+                    <img src="/instagram-icon.svg" className="social-media-icon" alt="" />
+                </a>
             </div>
             <ul className="nav-menu">
                 <li className="nav-item">

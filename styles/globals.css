@@ -2,10 +2,13 @@
 
 html,
 body {
-    background: #1a1a1a;
     padding: 0;
     margin: 0;
     font-family: "Oswald", sans-serif;
+}
+
+html {
+    background: #1a1a1a;
 }
 
 h1 {
@@ -37,6 +40,12 @@ li {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: #ffffff;
+}
+
+.social-media-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-right: 10px;
 }
 
 .nav-menu {
