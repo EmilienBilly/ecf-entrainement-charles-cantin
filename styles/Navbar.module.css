@@ -58,13 +58,14 @@
         position: fixed;
         padding: 0;
         left: 0;
+        visibility: hidden;
         opacity: 0;
         top: 5.5rem;
         flex-direction: column;
         min-width: 100vw;
         text-align: center;
         justify-content: center;
-        transition: 0.3s;
+        transition: visibility 0s, opacity 0.3s;
         background-color: rgba(26, 26, 26, 0.98);
         z-index: 3;
     }
@@ -80,6 +81,7 @@
     }
 
     .navMenu.active {
+        visibility: visible;
         opacity: 1;
     }
 

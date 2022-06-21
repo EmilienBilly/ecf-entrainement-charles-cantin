@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import PriceCard from "../components/PriceCard";
+import styles from "../styles/Prices.module.css";
 
 export async function getStaticProps() {
     const client = createClient({
@@ -17,9 +18,8 @@ export async function getStaticProps() {
 }
 
 const Prices = ({ prestations }) => {
-    console.log(prestations);
     return (
-        <div>
+        <div className={styles.container}>
             <h1>Tarifs & Préstations</h1>
             {prestations.map((prestation) => (
                 <PriceCard key={prestation.sys.id} prestation={prestation} />

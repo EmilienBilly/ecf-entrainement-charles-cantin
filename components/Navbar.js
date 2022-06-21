@@ -31,9 +31,11 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li className={styles.navItem}>
-                    <a className={styles.navLink} onClick={handleClick}>
-                        TARIFS & PRÉSATIONS
-                    </a>
+                    <Link href="/prices">
+                        <a className={styles.navLink} onClick={handleClick}>
+                            TARIFS & PRÉSATIONS
+                        </a>
+                    </Link>
                 </li>
                 <li className={styles.navItem}>
                     <a className={styles.navLink} onClick={handleClick}>
