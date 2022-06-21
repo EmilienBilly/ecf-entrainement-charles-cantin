@@ -20,10 +20,12 @@ export async function getStaticProps() {
 const Prices = ({ prestations }) => {
     return (
         <div className={styles.container}>
-            <h1>Tarifs & Préstations</h1>
-            {prestations.map((prestation) => (
-                <PriceCard key={prestation.sys.id} prestation={prestation} />
-            ))}
+            <h1 className={styles.title}>Tarifs & Préstations</h1>
+            <div className={styles.grid}>
+                {prestations.map((prestation) => (
+                    <PriceCard key={prestation.sys.id} prestation={prestation} />
+                ))}
+            </div>
         </div>
     );
 };

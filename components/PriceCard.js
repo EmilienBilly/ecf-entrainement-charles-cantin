@@ -7,12 +7,12 @@ const PriceCard = ({ prestation }) => {
     return (
         <div className={styles.card}>
             <h2 className={styles.titre}>{titre}</h2>
-            <div>
-                <Image className={styles.image} src={"https:" + photo.fields.file.url} width={350} height={200} objectFit={"cover"} alt="" />
+            <div className={styles.image}>
+                <Image src={"https:" + photo.fields.file.url} width={450} height={300} objectFit={"cover"} alt="" />
             </div>
             <div className={styles.description}>
-                <p>{description}</p>
-                <p>{prix}</p>
+                <p className={styles.text}>{description}</p>
+                <p className={styles.text}>{prix}</p>
             </div>
             <div></div>
         </div>

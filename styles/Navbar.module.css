@@ -16,7 +16,7 @@
     margin: 7px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #ffffff;
+    background-color: #f7f7f9;
 }
 
 .socialMediaIcon {
@@ -38,7 +38,7 @@
 
 .navLink {
     font-size: 1.2rem;
-    color: #ffffff;
+    color: #f7f7f9;
 }
 
 .navLink:after {
@@ -91,7 +91,7 @@
 
     .navLink {
         font-size: 1.7rem;
-        color: #ffffff;
+        color: #f7f7f9;
     }
 
     .hamburger {
@@ -109,5 +109,11 @@
 
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-12px) rotate(-45deg);
+    }
+}
+
+@media only screen and (min-width: 1921px) {
+    .navItem {
+        margin-left: 7rem;
     }
 }

@@ -1,23 +1,58 @@
 .titre {
+    margin: 5px;
+    font-size: 1.3em;
     color: #f18c52;
 }
 
 .card {
-    width: 300px;
+    width: 15em;
+    height: 19em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-sizing: border-box;
+    border: 2px solid #f7f7f9;
+    text-align: center;
 }
 
-.image {
-    background-size: cover;
+.text {
+    width: 90%;
+    font-size: 0.9em;
+    margin: 0.3em 0;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+@media only screen and (min-width: 1200px) {
+    .card {
+        width: 20em;
+        max-height: 25em;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .card {
+        width: 20em;
+        height: 25em;
+    }
+
+    .text {
+        font-size: 1.3em;
+    }
+
+    .titre {
+        margin-bottom: 1em;
+        font-size: 1.5em;
+        color: #f18c52;
+    }
 }
