@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem;
 }
 
 .hamburger {
@@ -115,5 +115,11 @@
 @media only screen and (min-width: 1921px) {
     .navItem {
         margin-left: 7rem;
+    }
+}
+
+@media only screen and (min-width: 3440px) {
+    .navbar {
+        padding: 2rem 10rem 1rem;
     }
 }

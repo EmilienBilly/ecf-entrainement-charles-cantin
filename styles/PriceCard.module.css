@@ -32,15 +32,15 @@
     justify-self: center;
     align-self: center;
 }
-
+/* 
 @media only screen and (min-width: 1200px) {
     .card {
         width: 20em;
         max-height: 25em;
     }
-}
+} */
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1921px) {
     .card {
         width: 20em;
         height: 25em;
