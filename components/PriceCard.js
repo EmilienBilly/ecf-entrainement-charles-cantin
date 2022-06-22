@@ -2,7 +2,8 @@ import styles from "../styles/PriceCard.module.css";
 import Image from "next/image";
 
 const PriceCard = ({ prestation }) => {
-    console.log(prestation);
+    console.log(prestation.fields);
+    // Object destructuring
     const { titre, description, prix, photo } = prestation.fields;
     return (
         <div className={styles.card}>

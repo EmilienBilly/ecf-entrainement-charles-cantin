@@ -8,6 +8,7 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
+    // Si isOpen = true alors ajout de la classe .active (ternary operator)
     const hamburgerClassName = isOpen ? `${styles.hamburger} ${styles.active}` : styles.hamburger;
     const navMenuClassName = isOpen ? `${styles.navMenu} ${styles.active}` : styles.navMenu;
     const navbarClassName = isOpen ? `${styles.navbar} ${styles.active}` : styles.navbar;

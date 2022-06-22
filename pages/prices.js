@@ -2,6 +2,7 @@ import { createClient } from "contentful";
 import PriceCard from "../components/PriceCard";
 import styles from "../styles/Prices.module.css";
 
+// Fetching with getStaticProps() because the datas come from a headless CMS (Nextjs feature)
 export async function getStaticProps() {
     const client = createClient({
         space: process.env.CONTENTFUL_SPACE_ID,
