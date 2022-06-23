@@ -1,6 +1,8 @@
 import { createClient } from "contentful";
 import styles from "../styles/Gallery.module.css";
 import Image from "next/image";
+import { useEffect } from "react";
+import Filter from "../components/Filter";
 
 export async function getStaticProps() {
     const client = createClient({
@@ -19,14 +21,18 @@ export async function getStaticProps() {
 
 const Gallery = ({ photos }) => {
     console.log(photos);
+    // photos = photos.sort(() => Math.random() - 0.5);
     return (
         <div className={styles.container}>
-            <h1>Gallerie</h1>
+            <h1 className={styles.title}>Galerie</h1>
             <div className={styles.grid}>
                 {photos.map((photo) => (
-                    <Image key={photo.sys.id} src={"https:" + photo.fields.image.fields.file.url} width={350} height={200} objectFit={"cover"} alt="" />
+                    <div className={photo.fields.orientation == "landscape" ? styles.short : styles.tall} key={photo.sys.id}>
+                        <Image src={"https:" + photo.fields.image.fields.file.url} layout="fill" objectFit="cover" alt="" />
+                    </div>
                 ))}
             </div>
+            <Filter photo={photos} />
         </div>
     );
 };
