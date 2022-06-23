@@ -1,15 +1,16 @@
+import styles from "../styles/Filter.module.css";
+
 const Filter = ({ photos }) => {
     return (
         <>
-            <div>
-                <div>
-                    <span></span>
-                </div>
-                <div>
-                    <button>Grossesse</button>
-                    <button>Couple</button>
-                    <button>Famille</button>
-                    <button>Bébé</button>
+            <div className={styles.container}>
+                <div className={styles.filter}>
+                    <button className={styles.btn}>Mariage</button>
+                    <button className={styles.btn}>Grossesse</button>
+                    <button className={styles.btn}>Couple</button>
+                    <button className={styles.btn}>Famille</button>
+                    <button className={styles.btn}>Bébé</button>
+                    <button className={styles.btn}>Baptême</button>
                 </div>
             </div>
         </>
