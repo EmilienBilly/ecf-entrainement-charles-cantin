@@ -1,14 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { motion } from "framer-motion";
 
 export default function Home() {
     return (
         <div>
-            <div className={styles.titre}>
+            <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} className={styles.titre}>
                 <h1 className={styles.name}>CHARLES CANTIN</h1>
                 <h1 className={styles.profession}>PHOTOGRAPHE</h1>
-            </div>
+            </motion.div>
             {/* Changing the html background-color defined in globals.css by a background-image */}
             <style jsx global>{`
                 html {

@@ -1,6 +1,6 @@
 import styles from "../styles/Filter.module.css";
 import { useState } from "react";
-import loadCustomRoutes from "next/dist/lib/load-custom-routes";
+import { motion } from "framer-motion";
 
 // Filter component using props (destructured) passed in the gallery.js page
 const Filter = ({ photos, filterPics }) => {
