@@ -4,13 +4,17 @@
     bottom: 0%;
 }
 .filter {
-    max-width: 400px;
+    max-width: 15%;
     padding: 0 20px 20px;
+}
+
+.clicked {
+    font-weight: 600;
 }
 
 .btn {
     font-family: "Montserrat", sans-serif;
-    color: #f7f7f9;
+    color: #f18c52;
     font-weight: 400;
     font-size: 1em;
     background-color: transparent;
