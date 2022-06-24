@@ -1,7 +1,7 @@
 import { createClient } from "contentful";
 import styles from "../styles/Gallery.module.css";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useState } from "react";
 import Filter from "../components/Filter";
 
 export async function getStaticProps() {
@@ -20,19 +20,21 @@ export async function getStaticProps() {
 }
 
 const Gallery = ({ photos }) => {
-    console.log(photos);
-    // photos = photos.sort(() => Math.random() - 0.5);
+    // Initialising pics state with props.photos value
+    const [pics, setPics] = useState(photos);
+    console.log(pics);
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Galerie</h1>
             <div className={styles.grid}>
-                {photos.map((photo) => (
-                    <div className={photo.fields.orientation == "landscape" ? styles.short : styles.tall} key={photo.sys.id}>
-                        <Image src={"https:" + photo.fields.image.fields.file.url} layout="fill" objectFit="cover" alt="" />
+                {pics.map((pics) => (
+                    <div className={pics.fields.orientation == "landscape" ? styles.short : styles.tall} key={pics.sys.id}>
+                        <Image src={"https:" + pics.fields.image.fields.file.url} layout="fill" objectFit="cover" alt="" />
                     </div>
                 ))}
             </div>
-            <Filter photo={photos} />
+            {/* Filter component which receive photos and filterPics as props */}
+            <Filter photos={photos} filterPics={(pics) => setPics(pics)} />
         </div>
     );
 };
